@@ -33,15 +33,15 @@
           <a href="#" class="read-on">Read on &rarr;</a>
         </article>-->
     <script id="articleTemplate" type="text/x-handlebars-template"> 
-      <article class="template" data-category={{category}}>
+      <article data-category={{category}}>
           <header>
             <h1>{{title}}</h1>
             <div class="byline">
-              By <address><a href="{{authorURL}}">{{author}}</a></address>
-              published <time pubdate datetime={{publishedOn}}>Publish Time</time>
+              By <address><a href={{authorUrl}}>{{{author}}}</a></address>
+              published <time pubdate datetime={{publishedOn}}>{{publishStatus}}</time>
             </div>
           </header>
-          <section class="article-body">{{body}}</section>
+          <section class="article-body">{{{body}}}</section>
           <a href="#" class="read-on">Read on &rarr;</a>
         </article>
     </script>

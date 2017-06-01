@@ -16,9 +16,8 @@ Article.prototype.toHtml = function() {
   //       - Get your template from the DOM.
   //       - Now "compile" your template with Handlebars.
 
-  var templateBlank = $('#articleTemplate.').html();
+  var templateBlank = $('#articleTemplate').html();
   var templateFiller = Handlebars.compile( templateBlank );
-
 
 
 
@@ -31,6 +30,11 @@ Article.prototype.toHtml = function() {
   this.publishStatus = this.publishedOn ? `published ${this.daysAgo} days ago` : '(draft)';
 
   // TODO: Use the function that Handlebars gave you to return your filled-in html template for THIS article.
+
+  var filledTemplate = templateFiller( this );
+  console.log(filledTemplate);
+  return filledTemplate;
+
 
 };
 
